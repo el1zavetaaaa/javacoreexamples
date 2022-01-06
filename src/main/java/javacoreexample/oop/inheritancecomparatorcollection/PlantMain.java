@@ -1,4 +1,4 @@
-package javacoreexample.oop;
+package javacoreexample.oop.inheritancecomparatorcollection;
 
 import java.util.*;
 

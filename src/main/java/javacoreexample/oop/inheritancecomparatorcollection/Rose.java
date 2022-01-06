@@ -1,4 +1,4 @@
-package javacoreexample.oop;
+package javacoreexample.oop.inheritancecomparatorcollection;
 
 public class Rose extends Plant{
     private String roseName;

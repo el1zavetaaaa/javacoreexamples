@@ -1,4 +1,4 @@
-package javacoreexample.oop;
+package javacoreexample.oop.inheritancecomparatorcollection;
 
 public class Acacia extends Plant {
     private String acaciaName;

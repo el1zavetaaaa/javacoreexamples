@@ -1,4 +1,4 @@
-package javacoreexample.comparetwostrings;
+package javacoreexample.strings.commonsymbols;
 
 
 import java.util.HashSet;

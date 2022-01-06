@@ -1,4 +1,4 @@
-package javacoreexample.oop;
+package javacoreexample.oop.inheritancecomparatorcollection;
 
 public abstract class Plant {
     private String plantFamily;
