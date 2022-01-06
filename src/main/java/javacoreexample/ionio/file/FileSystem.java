@@ -1,10 +1,15 @@
-package javacoreexample.io.file;
+package javacoreexample.ionio.file;
 
 import java.io.File;
 import java.io.FilenameFilter;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.stream.Stream;
 
 public class FileSystem {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         File file = new File("files");
         String[] getFilesWithRightName = file.list(new FilenameFilter() {
             @Override
@@ -26,5 +31,10 @@ public class FileSystem {
         System.out.println("Whether you can write into a file: " + file1.canWrite());
         System.out.println("Last modified: " + file1.lastModified());
         System.out.println("Hashcode: " + file1.hashCode());
+
+        Path paths = Paths.get("files","fileChannel.txt");
+
+        Stream<String> lines = Files.lines(paths);
+        lines.forEach((s -> System.out.println(s)));
     }
 }

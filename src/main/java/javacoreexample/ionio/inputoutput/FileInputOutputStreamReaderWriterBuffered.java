@@ -1,4 +1,4 @@
-package javacoreexample.io.inputoutput;
+package javacoreexample.ionio.inputoutput;
 
 import java.io.*;
 import java.util.Scanner;
