@@ -3,6 +3,7 @@ package javacoreexample.threads.creationofthreads;
 import java.util.Scanner;
 
 import static javacoreexample.threads.creationofthreads.RunThreadUsingInheritance.startRunThreadUsingInheritance;
+import static javacoreexample.threads.creationofthreads.RunThreadUsingInterfaceRunnable.startRunThreadUsingInterfaceRunnable;
 
 public class SimpleThread {
     public static void main(String[] args) {
@@ -22,7 +23,7 @@ public class SimpleThread {
                     startRunThreadUsingInheritance();
                     break;
                 case (2):
-                    startThreadsUsingInterfaceRunnable();
+                    startRunThreadUsingInterfaceRunnable();
                     break;
                 case (3):
                     shouldBreak = true;
@@ -33,27 +34,4 @@ public class SimpleThread {
         }
     }
 
-    public static int counter;
-
-    public static void startThreadsUsingInterfaceRunnable() {
-        Runnable runnable = new Runnable() {
-            @Override
-            public void run() {
-                synchronized (this) {
-                    counter = 0;
-                    for (int i = 0; i < 10; i++) {
-                        counter = counter + 1;
-                        System.out.println(Thread.currentThread().getName() + ":" + counter);
-                    }
-                }
-            }
-        };
-        Thread thread = new Thread(runnable);
-        thread.start();
-        try {
-            Thread.sleep(50);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-    }
 }
