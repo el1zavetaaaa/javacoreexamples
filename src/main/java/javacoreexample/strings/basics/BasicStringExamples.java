@@ -18,6 +18,14 @@ public class BasicStringExamples {
         String str3 = "CAT";
         System.out.println("Compare 2 strings using equals ignore case: " + str.equalsIgnoreCase(str3));
 
+        String str4 = "cat";
+        String str5 = new String("cat");
+        System.out.println("\nString pool example: ");
+        System.out.print("if we compare string, which was created as a new object: ");
+        System.out.print(str2 == str5);
+        System.out.print("\nif we compare string, which was created in the most simple way: ");
+        System.out.println(str2 == str4);
+
 
         System.out.println("\nReplace old character to a new one: " + str2.replace("a", "A"));
 
