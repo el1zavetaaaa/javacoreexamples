@@ -108,7 +108,7 @@ public class FindNumbersFromFile {
 
         for (int i = 0; i < arr.size() - 1; i++) {
             if (i == 0 || arr.get(i - 1) > arr.get(i)) {
-                subSeqLength++;
+                subSeqLength ++ ;
                 if (subSeqLength > longest) {
                     longest = subSeqLength;
                     indexStart = i;
